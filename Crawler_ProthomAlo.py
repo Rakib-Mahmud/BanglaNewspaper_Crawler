@@ -13,6 +13,9 @@ mydb=mysql.connector.connect(
         )
 mycursor=mydb.cursor()
 
+create_table=True
+if create_table:
+    mycursor.execute("CREATE TABLE IF NOT EXISTS `crawler_prothomalo` (Date VARCHAR(30),Headline VARCHAR(200),Content TEXT,PRIMARY KEY(Date,Headline))COLLATE utf8mb4_unicode_ci")
 #Comments are writen as a descriptor of the underneath line
 # =============================================================================
 # wb = Workbook()
@@ -21,7 +24,6 @@ mycursor=mydb.cursor()
 # =============================================================================
 def get_single_item_data(item_url):
     global count
-    count=w_sheet.nrows
     source_code = requests.get(item_url)
     plain_text = source_code.text
     soup = bs4.BeautifulSoup(plain_text, 'html.parser')
