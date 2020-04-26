@@ -14,7 +14,7 @@ mydb=mysql.connector.connect(
 mycursor=mydb.cursor()
 
 create_table=True
-if create_table:
+if create_table: 
     mycursor.execute("CREATE TABLE IF NOT EXISTS `crawler_prothomalo` (Date VARCHAR(30),Headline VARCHAR(200),Content TEXT,PRIMARY KEY(Date,Headline))COLLATE utf8mb4_unicode_ci")
 #Comments are writen as a descriptor of the underneath line
 # =============================================================================
