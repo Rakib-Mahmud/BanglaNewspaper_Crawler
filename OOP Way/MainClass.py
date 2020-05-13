@@ -88,7 +88,7 @@ PerpetualNewsCrawler = PerpetualNewsCrawler(crawlers, 3600)
 PerpetualNewsCrawler.crawl()
 
 
-# PerpetualNewsCrawler.signal_to_stop()
+# PerpetualNewsCrawler.signal_to_stop() ok
 
 
 # In[ ]:
