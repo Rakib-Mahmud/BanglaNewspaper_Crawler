@@ -1,11 +1,11 @@
-from CrawlerUtils         import CrawlerUtils
-from ProthomAloCrawler    import ProthomAloCrawler
-from JugantorClass        import JugantorClass
-from BanglaTribuneClass   import BanglaTribuneClass
-from DailyStarClass       import DailyStarClass
-from BdNewsClass          import BdNewsClass
-from somoyNewsClass       import somoyNewsClass
-from PerpetualNewsCrawler import PerpetualNewsCrawler
+from CrawlerUtils           import CrawlerUtils
+from ProthomAloCrawler      import ProthomAloCrawler
+from JugantorCrawler        import JugantorCrawler
+from BanglaTribuneCrawler   import BanglaTribuneCrawler
+from DailyStarCrawler       import DailyStarCrawler
+from BdNewsCrawler          import BdNewsCrawler
+from SomoyNewsCrawler       import SomoyNewsCrawler
+from PerpetualNewsCrawler   import PerpetualNewsCrawler
 
 
 db_settings = {
@@ -19,11 +19,11 @@ db_settings = {
 }
 
 prothom_alo_crawler = ProthomAloCrawler()
-dailyStar_crawler = DailyStarClass()
-somoyNews_crawler = somoyNewsClass()
-bdNews_crawler = BdNewsClass()
-banglaTribune_crawler = BanglaTribuneClass()
-jugantor_crawler = JugantorClass()
+dailyStar_crawler = DailyStarCrawler()
+somoyNews_crawler = SomoyNewsCrawler()
+bdNews_crawler = BdNewsCrawler()
+banglaTribune_crawler = BanglaTribuneCrawler()
+jugantor_crawler = JugantorCrawler()
 crawlers = [jugantor_crawler, prothom_alo_crawler, dailyStar_crawler, bdNews_crawler, banglaTribune_crawler, somoyNews_crawler ]
 
 PerpetualNewsCrawler = PerpetualNewsCrawler(crawlers, 3600)
